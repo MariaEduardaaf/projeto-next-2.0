@@ -1,0 +1,148 @@
+body {
+    background: rgba(235, 234, 234, 0.925);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+section {
+    background: #72c9d4;
+    border-radius: 10px;
+    padding: 10px;
+    height: 750px;
+    width: 700px;
+    margin-right: 5px;
+    box-shadow: 5px 5px 10px rgba(19, 1, 1, 0.973);
+}
+
+.pagination h1 {
+    color: antiquewhite;
+    margin: 0px 9px;
+    font-size: 30px;
+
+}
+
+footer {
+    color: rgba(248, 242, 242, 0.966);
+    text-align: center;
+    font-style: italic;
+}
+
+main {
+    margin: 50px auto;
+    display: table;
+}
+
+;
+
+#contatos {
+    width: 400px;
+    min-height: 400px;
+    padding: 35px;
+    background: 3px 3px 10px rgb(230, 43, 43);
+    float: right;
+}
+
+.codigos {
+    width: 100px;
+    float: left;
+}
+
+.botao {
+    width: 100px;
+    height: 100px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    border: 1px;
+}
+
+#adicionar-contato {
+    background: #df8add;
+    border-color: #e495e2;
+}
+
+#apagar-contato {
+    background: #a1f58d;
+    border-color: #b5e9a8;
+}
+
+#editar-contato {
+    background: #87cefa;
+    border-color: #b1e1ff;
+}
+
+.itemLista {
+    margin: 20px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #aaa;
+}
+
+.itemLista:last-child {
+    border: 0;
+}
+
+#tudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+ /*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .btn-custom {
+        margin: 10px 15px;
+        font-size: 1em;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media   (max-width: 767.98px) {
+    
+    
+
+    .btn-custom {
+        margin: 10px 15px;
+    }
+
+    h1{
+        font-size: 35px; 
+        text-align: center;
+    }
+    
+    
+    .page-item {
+        height: 190px;
+        width: 90px;
+        font-size: 18px;
+    }
+    .pagination h1 {
+        font-size: 18px;
+    }
+    .botao {
+        width: 90px;
+        height: 250px;
+        padding: 20px 20px;
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        border: 10px;
+    }
+    .itemLista {
+        margin: 10px 0 10px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted rgb(240, 240, 240);
+    }
+    
+}
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+   
+}
+
