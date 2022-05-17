@@ -4,6 +4,27 @@ const limit = 6
 var count = 0
 listar()
 
+const createImg = () => {
+  const body = document.querySelector('.itemLista')
+  const imagem = document.createElement('img')
+
+  imagem.setAttribute('src', 'https://avatars.githubusercontent.com/u/76252582?v=4')
+  imagem.setAttribute('class', 'teste')
+
+  body.appendChild(imagem)
+
+}
+
+function fotinha() {
+  const body = document.querySelector('.itemLista')
+  const foto = document.createElement('img')
+
+foto.setAttribute('src', 'https://avatars.githubusercontent.com/u/76252582?v=4')
+
+body.appendChild(foto)
+}
+
+document.addEventListener('click', fotinha)
 
 function proximaPagina() {
   if (skip + limit <= count) {
@@ -18,7 +39,6 @@ function voltarPagina() {
     atualizarLista()
   }
 }
-
 
 async function listar() {
 
@@ -35,15 +55,13 @@ async function listar() {
   document.getElementById('listagem').innerHTML = `${skip + 1} - ${position} de ${count}`
 }
 
-
-
-
-
 function aparecer(pessoa) {
   var contatos = document.getElementById('contatos');
-  contatos.innerHTML += '<div class="itemLista"><b>Nome</b>: ' + pessoa.nome + " " +
+  contatos.innerHTML += '<div class="itemLista"> <img src="https://pin.it/6AYrqII" alt=""><b>Nome</b>: ' + pessoa.nome + " " +
     "<br><b>telefone</b>:" + pessoa.telefone + "<br><b>E-mail</b>: " + pessoa.email + "</div>";
 }
+
+
 
 var adicionarContato = document.getElementById("adicionar-contato");
 adicionarContato.onclick = async function () {
@@ -61,8 +79,6 @@ function atualizarLista() {
 
   listar();
 }
-
-
 
 var editarContato = document.getElementById("editar-contato");
 editarContato.onclick = async function () {

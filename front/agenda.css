@@ -1,27 +1,31 @@
 body {
-    background: rgba(235, 234, 234, 0.925);
+    background-image: url(Papel\ Leve\ Textura\ De\ Plano\ De\ Fundo\ Texturizado.jfif);
     font: normal 15pt Arial;
     display: block;
 }
 
 .container {
-    background-color: #D3E3E6;
+    background-color: #e8eff0;
     border-radius: 30px;
 }
 
+.teste {
+    max-width: 40px !important;
+    height: auto !important;
+}
 
 section {
-    background: #c8dadd;
-    border-radius: 10px;
-    padding: 10px;
+    background: #e3e8e9;
+    border-radius: 25px;
+    padding: 30px;
     height: 750px;
     width: 1010px;
     margin-right: 5px;
-    box-shadow: 5px 5px 10px rgba(19, 1, 1, 0.973);
+    box-shadow: 5px 5px 10px rgba(19, 1, 1, 0.575);
 }
 
 .pagination h1 {
-    color:  #000000;
+    color: #000000;
     margin: 0px 9px;
     font-size: 30px;
 
@@ -31,14 +35,7 @@ footer {
     color: rgba(248, 242, 242, 0.966);
     text-align: center;
     font-style: italic;
-}
-
-main {
-    margin: 50px auto;
-    display: table;
-}
-
-;
+};
 
 #contatos {
     width: 400px;
@@ -63,20 +60,20 @@ main {
 }
 
 #adicionar-contato {
-    background: #93eafaa1;
+    background: #b0e6f0c9;
     border-color: #4d6164;
     border-radius: 5px;
 }
 
 #apagar-contato {
-    background: #74def1b9;
+    background: #9be9f7e1;
     border-color: #33595f;
     border-radius: 5px;
 
 }
 
 #editar-contato {
-    background: #48d3ebab;
+    background: #7fe2f3c5;
     border-color: #224e55;
     border-radius: 5px;
 
@@ -99,7 +96,7 @@ main {
 }
 
 
- /*Extra small devices (portrait phones, less than 576px)*/
+/*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
     .btn-custom {
         margin: 10px 15px;
@@ -108,28 +105,30 @@ main {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media   (max-width: 767.98px) {
-    
-    
+@media (max-width: 767.98px) {
+
+
 
     .btn-custom {
         margin: 10px 15px;
     }
 
-    h1{
-        font-size: 35px; 
+    h1 {
+        font-size: 35px;
         text-align: center;
     }
-    
-    
+
+
     .page-item {
         height: 190px;
         width: 90px;
         font-size: 18px;
     }
+
     .pagination h1 {
         font-size: 18px;
     }
+
     .botao {
         width: 90px;
         height: 250px;
@@ -138,17 +137,14 @@ main {
         color: rgb(0, 0, 0);
         border: 10px;
     }
+
     .itemLista {
         margin: 10px 0 10px 0;
         padding-bottom: 10px;
         border-bottom: 1px dotted rgb(240, 240, 240);
     }
-    
-}
 
+}
 
 /* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-   
-}
-
+@media (min-width: 768px) and (max-width: 991.98px) {}
