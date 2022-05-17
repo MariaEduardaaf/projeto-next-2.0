@@ -1,26 +1,27 @@
 body {
     background: rgba(235, 234, 234, 0.925);
     font: normal 15pt Arial;
+    display: block;
 }
 
-header {
-    color: rgb(0, 0, 0);
-    text-align: center;
-
+.container {
+    background-color: #D3E3E6;
+    border-radius: 30px;
 }
+
 
 section {
-    background: #72c9d4;
+    background: #c8dadd;
     border-radius: 10px;
     padding: 10px;
     height: 750px;
-    width: 700px;
+    width: 1010px;
     margin-right: 5px;
     box-shadow: 5px 5px 10px rgba(19, 1, 1, 0.973);
 }
 
 .pagination h1 {
-    color: antiquewhite;
+    color:  #000000;
     margin: 0px 9px;
     font-size: 30px;
 
@@ -62,18 +63,23 @@ main {
 }
 
 #adicionar-contato {
-    background: #df8add;
-    border-color: #e495e2;
+    background: #93eafaa1;
+    border-color: #4d6164;
+    border-radius: 5px;
 }
 
 #apagar-contato {
-    background: #a1f58d;
-    border-color: #b5e9a8;
+    background: #74def1b9;
+    border-color: #33595f;
+    border-radius: 5px;
+
 }
 
 #editar-contato {
-    background: #87cefa;
-    border-color: #b1e1ff;
+    background: #48d3ebab;
+    border-color: #224e55;
+    border-radius: 5px;
+
 }
 
 .itemLista {
