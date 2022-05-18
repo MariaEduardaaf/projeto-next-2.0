@@ -16,15 +16,22 @@ const createImg = () => {
 }
 
 function fotinha() {
-  const body = document.querySelector('.itemLista')
-  const foto = document.createElement('img')
+  const listItem = document.querySelector('.itemLista')
+  const itensLista = document.querySelectorAll('.itemLista')
 
-foto.setAttribute('src', 'https://avatars.githubusercontent.com/u/76252582?v=4')
 
-body.appendChild(foto)
+  itensLista.forEach((item) => {
+    const foto = document.createElement('img')
+    foto.setAttribute('src', 'https://github.com/g-reissantana.png')
+
+    foto.classList.add('imagem3x4')
+
+
+    item.appendChild(foto)
+
+  })
+
 }
-
-document.addEventListener('click', fotinha)
 
 function proximaPagina() {
   if (skip + limit <= count) {
@@ -48,20 +55,33 @@ async function listar() {
   carregando.style = 'display:none;'
   contatos = retorno.contatos
   count = retorno.count
+
+  // Loop para mostrar lista em tela
   for (var i = 0; i < contatos.length; i++) {
     aparecer(contatos[i]);
-  }
+  } 
+  
+  fotinha()
+  
   var position = skip + limit > count ? count : skip + limit
   document.getElementById('listagem').innerHTML = `${skip + 1} - ${position} de ${count}`
 }
 
 function aparecer(pessoa) {
   var contatos = document.getElementById('contatos');
-  contatos.innerHTML += '<div class="itemLista"> <img src="https://pin.it/6AYrqII" alt=""><b>Nome</b>: ' + pessoa.nome + " " +
-    "<br><b>telefone</b>:" + pessoa.telefone + "<br><b>E-mail</b>: " + pessoa.email + "</div>";
+  // contatos.innerHTML += '<div class="itemLista"> <b>Nome</b>' + pessoa.nome + " " +
+  //   "<br><b>telefone</b>:" + pessoa.telefone + "<br><b>E-mail</b>: " + pessoa.email + "</div>";
+  contatos.innerHTML += `
+    <div class="itemLista">
+      <div> 
+        <p><b>Nome: </b>${pessoa.nome}</p>
+        <p><b>telefone: </b> ${pessoa.telefone}</p>
+        <p><b>E-mail: </b>${pessoa.email}</p>
+        
+      </div> 
+    </div>
+    `
 }
-
-
 
 var adicionarContato = document.getElementById("adicionar-contato");
 adicionarContato.onclick = async function () {
