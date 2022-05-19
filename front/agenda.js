@@ -134,11 +134,14 @@ async function request(metodo, endpoint, data) {
   })
 }
 
-
 function ficheiro() {
-  const arch = document.getElementById('file')
-
-  console.log(arch.value)
+  var file = document.getElementById('file').files[0];
+  console.log(document.getElementById('file').files)
+  let r = new FileReader();
+  r.readAsDataURL(file)
+  r.onload = function () {
+    let x = r.result;
+    document.getElementById('img').src = x;
+    // console.log(x)
+  }
 }
-
-document.addEventListener('click', ficheiro)
