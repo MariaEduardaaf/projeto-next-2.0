@@ -16,16 +16,16 @@ const createImg = () => {
 }
 
 function fotinha() {
+  
   const listItem = document.querySelector('.itemLista')
   const itensLista = document.querySelectorAll('.itemLista')
 
 
   itensLista.forEach((item) => {
-    const foto = document.createElement('img')
-    foto.setAttribute('src', 'https://github.com/g-reissantana.png')
+    const  foto = document.createElement('img')
+    foto.setAttribute('src', 'user.png')
 
-    foto.classList.add('imagem3x4')
-
+    //  foto.classList.add('imagem3x4')
 
     item.appendChild(foto)
 
