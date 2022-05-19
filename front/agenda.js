@@ -59,10 +59,10 @@ async function listar() {
   // Loop para mostrar lista em tela
   for (var i = 0; i < contatos.length; i++) {
     aparecer(contatos[i]);
-  } 
-  
+  }
+
   fotinha()
-  
+
   var position = skip + limit > count ? count : skip + limit
   document.getElementById('listagem').innerHTML = `${skip + 1} - ${position} de ${count}`
 }
@@ -133,3 +133,12 @@ async function request(metodo, endpoint, data) {
     xhr.send(JSON.stringify(data ?? {}))
   })
 }
+
+
+function ficheiro() {
+  const arch = document.getElementById('file')
+
+  console.log(arch.value)
+}
+
+document.addEventListener('click', ficheiro)
