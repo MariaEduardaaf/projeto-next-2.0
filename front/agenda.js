@@ -25,8 +25,6 @@ function fotinha() {
     const  foto = document.createElement('img')
     foto.setAttribute('src', 'user.png')
 
-    //  foto.classList.add('imagem3x4')
-
     item.appendChild(foto)
 
   })
@@ -69,15 +67,19 @@ async function listar() {
 
 function aparecer(pessoa) {
   var contatos = document.getElementById('contatos');
-  // contatos.innerHTML += '<div class="itemLista"> <b>Nome</b>' + pessoa.nome + " " +
-  //   "<br><b>telefone</b>:" + pessoa.telefone + "<br><b>E-mail</b>: " + pessoa.email + "</div>";
+
   contatos.innerHTML += `
     <div class="itemLista">
       <div> 
         <p><b>Nome: </b>${pessoa.nome}</p>
         <p><b>telefone: </b> ${pessoa.telefone}</p>
         <p><b>E-mail: </b>${pessoa.email}</p>
-        
+
+        <input type="file" id="file" multiple onchange="ficheiro( )" />
+
+        <img id="img" src="user.png">
+  
+  
       </div> 
     </div>
     `
@@ -93,6 +95,7 @@ adicionarContato.onclick = async function () {
   await request('POST', 'http://localhost:3333/api/agenda', contato)
   atualizarLista();
 }
+
 
 function atualizarLista() {
   document.getElementById('contatos').innerHTML = ' ';
@@ -135,13 +138,13 @@ async function request(metodo, endpoint, data) {
 }
 
 function ficheiro() {
-  var file = document.getElementById('file').files[0];
-  console.log(document.getElementById('file').files)
+  const file = document.getElementById('file').files[0];
+
   let r = new FileReader();
   r.readAsDataURL(file)
   r.onload = function () {
     let x = r.result;
     document.getElementById('img').src = x;
-    // console.log(x)
+    console.log(document.getElementById('img').src = x)
   }
 }

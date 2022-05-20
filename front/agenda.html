@@ -26,21 +26,30 @@
     </header>
   </div>
 
-  <input type="file" id="file" multiple onchange="ficheiro( )"/>
+  
+  <div class="photo">
 
+    <input type="file" id="file" multiple onchange="ficheiro( )" />
+
+    <img id="img" src="">
+  
+  </div>
 
   <div id="tudo">
+
+  
 
     <section>
       <div id="carregar">
         <div class="d-flex justify-content-center">
           <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only"></span>
           </div>
         </div>
       </div>
       <div class="contatos" id="contatos">
       </div>
+     
 
       <ul class="pagination">
         <li class="page-item" onclick="voltarPagina()">
