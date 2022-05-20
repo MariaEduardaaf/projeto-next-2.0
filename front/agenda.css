@@ -8,6 +8,7 @@ body {
     display: block;
 }
 
+ 
 img {
     width: 80px;
     height: 80px;
@@ -18,7 +19,6 @@ img {
     background-color: #e8eff0;
     border-radius: 30px;
 }
-
 
 section {
     background: #e3e8e9;
@@ -106,7 +106,6 @@ footer {
     justify-content: center;
 }
 
-
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
     .btn-custom {
@@ -117,8 +116,6 @@ footer {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 767.98px) {
-
-
 
     .btn-custom {
         margin: 10px 15px;

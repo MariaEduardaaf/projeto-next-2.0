@@ -15,21 +15,21 @@ const createImg = () => {
 
 }
 
-function fotinha() {
-  
+/*function fotinha() {
+
   const listItem = document.querySelector('.itemLista')
   const itensLista = document.querySelectorAll('.itemLista')
 
 
   itensLista.forEach((item) => {
-    const  foto = document.createElement('img')
+    const foto = document.createElement('img')
     foto.setAttribute('src', 'user.png')
 
     item.appendChild(foto)
 
   })
 
-}
+}*/
 
 function proximaPagina() {
   if (skip + limit <= count) {
@@ -76,9 +76,7 @@ function aparecer(pessoa) {
         <p><b>E-mail: </b>${pessoa.email}</p>
 
         <input type="file" id="file" multiple onchange="ficheiro( )" />
-
-        <img id="img" src="user.png">
-  
+        <img  style="width: 80px; height: 80px; border-radius: 40px;" id="img" src="user.png">
   
       </div> 
     </div>
@@ -95,7 +93,6 @@ adicionarContato.onclick = async function () {
   await request('POST', 'http://localhost:3333/api/agenda', contato)
   atualizarLista();
 }
-
 
 function atualizarLista() {
   document.getElementById('contatos').innerHTML = ' ';
@@ -114,7 +111,6 @@ editarContato.onclick = async function () {
   await request('PUT', `http://localhost:3333/api/agenda/${telefone}`, contato)
   atualizarLista();
 }
-
 
 var apagarContato = document.getElementById("apagar-contato");
 apagarContato.onclick = async function () {
