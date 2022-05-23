@@ -52,6 +52,7 @@ module.exports = {
         });
     },
 
+
     alterar: (nome, telefone, email, telefoneIdentificador) => {
         return new Promise((aceito, rejeitado) => {
 
